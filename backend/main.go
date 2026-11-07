@@ -22,6 +22,11 @@ func main() {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /health", s.handleHealth)
+	mux.HandleFunc("GET /api/people", notImplemented)
+	mux.HandleFunc("POST /api/login", notImplemented)
+	mux.HandleFunc("POST /api/logout", notImplemented)
+	mux.HandleFunc("GET /api/me", notImplemented)
+	mux.HandleFunc("GET /api/directory", notImplemented)
 
 	srv := &http.Server{
 		Addr:              ":" + port,
@@ -36,4 +41,8 @@ func main() {
 	if err := srv.ListenAndServe(); err != nil && !errors.Is(err, http.ErrServerClosed) {
 		log.Fatal(err)
 	}
+}
+
+func notImplemented(w http.ResponseWriter, r *http.Request) {
+	http.Error(w, "not implemented", http.StatusNotImplemented)
 }
