@@ -16,7 +16,8 @@
 - rush info
 - brotherhood
 - internal brother database for brothers
-  <img width="515" height="350" alt="image" src="https://github.com/user-attachments/assets/f855aa4c-400b-4225-9182-4daf25faadc9" />
+
+<img width="515" height="350" alt="image" src="https://github.com/user-attachments/assets/f855aa4c-400b-4225-9182-4daf25faadc9" />
 
 
 
